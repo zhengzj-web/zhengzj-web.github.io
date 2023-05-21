@@ -3,7 +3,7 @@ plugins:
 
 title: zhengzejun's web
 description:
-    <a href="https://zhengzj-web.github.io/">学而不思则罔，思而不学则怠。
+    学而不思则罔，思而不学则怠。
 
 paginate: 10
 paginate_path: /page/:num/
