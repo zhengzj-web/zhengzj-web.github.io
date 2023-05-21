@@ -1,0 +1,7 @@
+title: zhengzj-web
+description:
+    <a href="https://zhengzj-web.github.io/">
+
+paginate: 10
+paginate_path: /page/:num/
+permalink: /:title/
