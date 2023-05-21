@@ -1,0 +1,11 @@
+---
+layout: post
+title: 创建个人博客！
+tags: 黄帝内经
+categories: 黄帝内经
+---
+# 1. 数据收集
+
+## 1.1. Sqoop
+
+Sqoop是为了就解决关系数据库与Hadoop之间数据传输问题，构建了这两者之间的“桥梁”。
