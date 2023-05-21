@@ -5,4 +5,4 @@ description:
 paginate: 10
 paginate_path: /page/:num/
 permalink: /:title/
-page.title: 黄帝内经
+site.categories: 黄帝内经
