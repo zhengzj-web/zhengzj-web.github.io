@@ -8,4 +8,5 @@ description:
 paginate: 10
 paginate_path: /page/:num/
 permalink: /:title/
-categories: 黄帝内经
+category: 黄帝内经
+tag: 黄帝内经
