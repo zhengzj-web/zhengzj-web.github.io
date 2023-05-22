@@ -3,15 +3,15 @@
 		{% for entry in include.list %}
 			<li>
 				<a href="{{ entry.href | replace_first: "/", "%%/" | replace: "%%//", "//" | replace: "%%", site.baseurl }}">
-					{% assign navbar-links = entry.navbar-links | map: "href" %}
+					{% assign children = entry.children | map: "href" %}
 
-					{% if entry.href == page.url or navbar-links contains page.url %}
+					{% if entry.href == page.url or children contains page.url %}
 						<strong>{{ entry.title }}</strong>
 					{% else %}
 						{{ entry.title }}
 					{% endif %}
 				</a>
-				{% include menu.liquid list=entry.navbar-links %}
+				{% include menu.liquid list=entry.children %}
 			</li>
 		{% endfor %}
 	</ul>
