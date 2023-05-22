@@ -4,10 +4,10 @@ layout: default
 {% include series.liquid posts=paginator.posts %}
 
 {% unless paginator.posts %}
-	<header><h1 class="title">Nothing Found</h1></header>
+	<header><h1 class="title">什麼都沒找到</h1></header>
 	<p>
-		It seems we can’t find what you’re looking for.
-		{% comment %} Perhaps searching can help. {% endcomment %}
+		沒有找到你要的內容。
+		{% comment %} 也許你可以搜尋一下看看。 {% endcomment %}
 	</p>
 {% endunless %}
 
@@ -56,7 +56,7 @@ layout: default
 	{% if paginator.page == 1 %}
 		<template id="loader">
 			<link rel="stylesheet" href="loader.css">
-			<button type="button" id="load">Older posts</button>
+			<button type="button" id="load">較舊貼文</button>
 		</template>
 		<script type="module">
 			import load from "./load.js";
@@ -64,6 +64,13 @@ layout: default
 		</script>
 	{% endif %}
 {% endif %}
+
+{% assign entry = site.data.menu | where: "href", page.url %}
+{% assign children = entry[0].children %}
+<nav>{% include menu.liquid list=children %}</nav>
+{% comment %}
+vim: filetype=liquid
+{% endcomment %}
 
 {% comment %}
 vim: filetype=liquid
