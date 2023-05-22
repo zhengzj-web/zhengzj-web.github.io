@@ -1,32 +1,29 @@
-
-
-paginate: 10
-paginate_path: /page/:num/
-permalink: /:title/
-
-# --- General options --- #
-
+# --- 一般选项 --- #
 # Name of website
 title: zhengzejun's web
-
 # Short description of your site
-description:
-     学而不思则罔，思而不学则怠。
+description: 学而不思则罔，思而不学则怠。
 
-# --- Local development options ---
-# If your website is hosted locally rather than on GitHub, then you need to uncomment the next two parameters to set the url and baseurl
-# *** If you're not sure what this mean, then leave this section as it is. Only modify the url and baseurl if you know what you're doing!***
+# Pagination
+paginate: 10
+paginate_path: /page/:num/
 
-# url is the the website domain URL without a trailing slash
+# 用于输出网站的后缀...github.io/黄帝内经开篇/
+permalink: /:title/
+
+
+# --- 本地开发选项 ---
+# 如果你的网站是在本地托管的，而不是在GitHub上，那么你需要取消注释接下来的两个参数来设置url和baseurl
+
+# url 是没有拖尾斜杠的网站域
 #url: "https://example.com"
-
-# baseurl should be an empty string
+# baseurl 应该为空字符串
 #baseurl: ""
 
-# --- Navigation bar options --- #
+# --- 导航栏选项 --- #
 
 # List of links in the navigation bar
-navbar-links:
+navigation:
   主页: "https://zhengzj-web.github.io"
   博客:
    - 分类: "https://zhengzj-web.github.io/categories/"
@@ -49,7 +46,7 @@ navbar-links:
 
 navbar-col: "#F5F5F5"
 navbar-text-col: "#404040"
-navbar-children-col: "#F5F5F5"
+navbar-navigation-col: "#F5F5F5"
 page-col: "#FFFFFF"
 link-col: "#008AFF"
 hover-col: "#0085A1"
@@ -166,13 +163,24 @@ permalink: /:categories/:title/
 
 # Output options (more information on Jekyll's site)
 timezone: "Asia/China"
-markdown: kramdown
-highlighter: rouge
-permalink: /:year-:month-:day-:title/
-paginate: 10
-
+markdown: kramdown  # [ maruku | rdiscount | kramdown | redcarpet ]
 kramdown:
   input: GFM
+  syntax_highlighter: rouge # coderay
+  syntax_highlighter_opts:
+    css_class: highlight
+    default_lang: console
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+      start_line: 1
+
+# Highlight
+highlighter: rouge
+
+
+
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
