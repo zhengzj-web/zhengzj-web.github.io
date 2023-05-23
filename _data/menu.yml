@@ -1,15 +1,25 @@
 # --- 导航栏选项 --- #
 
 # List of links in the navigation bar
-  - 主页: "https://zhengzj-web.github.io"
-  - 中医:
-   - 黄帝内经: /黄帝内经/
-   - 神农本草: /神农本草/
-   - 伤寒论: /伤寒论/
-   - 杂病论: /杂病论/
-  - 文章标签: "https://zhengzj-web.github.io/tags/"
-  - 关于: "about"
-  - 搜索: "search"
+- title: 主页
+  href: https://zhengzj-web.github.io
+- title: 汉唐中医
+  href: https://zhengzj-web.github.io/hantang_medicine/
+  children:
+   - title: 黄帝内经
+   href: /黄帝内经/
+   - title: 神农本草
+   href: /神农本草/
+   - title: 伤寒论
+   href: /伤寒论/
+   - title: 杂病论
+   href: /杂病论/
+- title: 结构工程
+  href: https://zhengzj-web.github.io/structure_engineering/
+- : WEB开发
+  href: https://zhengzj-web.github.io/web_skill/
+- title: 关于
+  href: https://zhengzj-web.github.io/about_me/
 
 
 # Image to show in the navigation bar - image must be a square (width = height)
