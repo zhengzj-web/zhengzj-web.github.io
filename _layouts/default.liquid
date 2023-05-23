@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,24 +8,29 @@
 
 	{% if structure == empty %}
 		<title>{{ site.title }} – {{ site.description | strip_html }}</title>
+		<link rel="alternate" type="application/atom+xml" href="{{ site.baseurl }}/feed.atom">
 	{% elsif structure[0] == "page" %}
-		<title>{{ site.title }} – Page {{ structure[1] }} – {{ site.description | strip_html }}</title>
+		<title>{{ site.title }} – 第 {{ structure[1] }} 頁 – {{ site.description | strip_html }}</title>
 	{% else %}
 		<title>{{ page.title }} – {{ site.title }}</title>
 	{% endif %}
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:,i,b,bi,900,900i%7CMontserrat:,b%7CInconsolata:,b&amp;display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&amp;display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:,b,900&amp;display=fallback">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/main.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/clearings.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/genericons.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/highlight.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/social.css">
+	<link rel="stylesheet" href="{{ site.baseurl }}/style/bridge.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/screen/44.375.css" media="screen and (min-width: 44.375em)">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/screen/56.875.css" media="screen and (min-width: 56.875em)">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/screen/61.5625.css" media="screen and (min-width: 61.5625em)">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/screen/85.125.css" media="only screen and (min-width: 85.125em)">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/print.css" media="only print">
+	<script async type="module" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
 	<header>
@@ -34,13 +39,13 @@
 			<p>{{ site.description }}</p>
 		</div>
 		<input hidden type="checkbox" id="ballot">
-		<label class="toggle" for="ballot">Menu</label>
+		<label class="toggle" for="ballot">選單</label>
 		{% include navigation.liquid %}
 	</header>
-	<main>{{ content }}</main>
+	<main>{{ content | replace: '♥', '<span class="redsuit">♥</span>' | replace: '♦', '<span class="redsuit">♦</span>' }}</main>
 	<aside>
 		<section>
-			<h2>Categories</h2>
+			<h2>分類</h2>
 			<ul>
 				{% assign categories = site.categories | sort %}
 				{% for category in categories %}
@@ -49,24 +54,31 @@
 			</ul>
 		</section>
 		<section class="tagcloud">
-			<h2>Tags</h2>
+			<h2>標籤</h2>
 			{% assign tags = site.tags | sort %}
 			{% for tag in tags %}
 				<a href="{{ site.baseurl }}/tag/{{ tag[0] | slugify | uri_escape }}">{{ tag[0] }}</a>
 			{% endfor %}
 		</section>
 		<section>
-			<h2>Recent posts</h2>
+			<h2>近期文章</h2>
 			<ul>
 				{% for post in site.posts limit: 5 %}
 					<li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
 				{% endfor %}
 			</ul>
 		</section>
+		<section>
+			<h2>其他</h2>
+			<ul>
+				<li><a href="{{ site.baseurl }}/feed.atom">訂閱貼文</a></li>
+				<li><a href="https://github.com/jdh8/jdh8.com">本站原始碼</a></li>
+			</ul>
+		</section>
 	</aside>
 	<footer>
 		{% include navigation.liquid %}
-		<p>This blog is styled with <a rel="publisher" href="https://github.com/jdh8/sweet-16/">Sweet 16</a>.</p>
+		<p>本站使用 <a rel="publisher" lang="en" hreflang="en" href="https://github.com/jdh8/sweet-16/">Sweet 16</a> 佈景主題。</p>
 	</footer>
 </body>
 </html>
