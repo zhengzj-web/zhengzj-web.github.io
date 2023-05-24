@@ -7,13 +7,13 @@
   href: /汉唐中医/
   children:
     - title: 黄帝内经
-    href: /汉唐中医/黄帝内经/
+      href: /汉唐中医/黄帝内经/
     - title: 神农本草
-    href: /汉唐中医/神农本草/
+      href: /汉唐中医/神农本草/
     - title: 伤寒论
-    href: /汉唐中医/伤寒论/
+      href: /汉唐中医/伤寒论/
     - title: 杂病论
-    href: /汉唐中医/杂病论/
+      href: /汉唐中医/杂病论/
 - title: 结构工程
   href: https://zhengzj-web.github.io/structure_engineering/
 - title: WEB开发
