@@ -3,6 +3,12 @@
 # List of links in the navigation bar
 - title: 主页
   href: https://zhengzj-web.github.io
+- title: 所有文章
+  children:
+    - title: 分类
+      href: categories.html
+    - title: 标签
+      href: tags.html
 - title: 汉唐中医
   href: /汉唐中医/
   children:
@@ -16,8 +22,6 @@
       href: /杂病论/
     - title: 针灸火罐
       href: /针灸火罐/
-- title: 分类
-  href: https://zhengzj-web.github.io/categories.html
 - title: 结构工程
   href: https://zhengzj-web.github.io/structure_engineering/
 - title: WEB开发
