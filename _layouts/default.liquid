@@ -2,7 +2,7 @@
 <html lang="zh-Hans">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 	{% assign structure = page.url | split: "/" | shift %}
 
@@ -21,7 +21,6 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&amp;display=swap">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:,b,900&amp;display=fallback">
 {% endcomment %}
-
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/main.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/clearings.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/genericons.css">
@@ -34,7 +33,20 @@
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/screen/85.125.css" media="only screen and (min-width: 85.125em)">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/print.css" media="only print">
 </head>
+
 <body>
+	{% if page.url contains "posts" %}
+  <!-- 文章详情页面，右侧边栏只有文章目录索引卡片弹性置顶 -->
+  {% assign aside_sticky = "" %}
+  <!-- else -->
+  {% else %}
+  <!-- 非文章详情页面，右侧边栏所有卡片弹性置顶 -->
+  {% assign aside_sticky = "aside-sticky" %}
+  <!-- endif -->
+  {% endif %}
+
+  <!-- 今天学习到这里20230525 -->
+
 	<header>
 		<div class="brand">
 			<h1><a href="{{ site.baseurl }}/" rel="home">{{ site.title }}</a></h1>
@@ -72,7 +84,12 @@
 		</section>
 	</aside>
 	<footer>
-		{% include navigation.liquid %}
+		<!--添加访问统计-->
+		<p  class="theme-by text-muted">
+		<script src="{{ site.baseurl }}/js/busuanzi.pure.mini.js"></script>
+		<span id="busuanzi_container_site_pv">
+			本站访问量<span id="busuanzi_value_site_pv"></span>次。</span>
+		</p>
 		<p>本站使用 <a rel="publisher" lang="en" hreflang="en" href="https://github.com/jdh8/sweet-16/">Sweet 16</a> 主題。</p>
 	</footer>
 </body>

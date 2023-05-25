@@ -547,7 +547,7 @@ header {
   line-height: 0.875rem; }
 
 body > header {
-  padding: 2.625rem 7.6923076923076923%;
+  padding: 2rem 5%;
   display: flex;
   flex-wrap: wrap;
   align-items: center; }
