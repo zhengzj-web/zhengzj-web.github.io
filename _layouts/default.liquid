@@ -34,7 +34,7 @@
 </head>
 
 <body>
-	{% if page.url contains "posts" %}
+	{% if page.url contains "黄帝内经" %}
   <!-- 文章详情页面，右侧边栏只有文章目录索引卡片弹性置顶 -->
   {% assign aside_sticky = "" %}
   <!-- else -->
@@ -54,9 +54,7 @@
 		<label class="toggle" for="ballot">菜单</label>
 		{% include navigation.liquid %}
 	</header>
-	
-	  <!-- 今天学习到这里20230525 -->
-	<main>{{ content | replace: '♥', '<span class="redsuit">♥</span>' | replace: '♦', '<span class="redsuit">♦</span>'| strip_html | truncate: 200 }}</main>
+	<main>{{ content | replace: '♥', '<span class="redsuit">♥</span>' | replace: '♦', '<span class="redsuit">♦</span>' }}</main>
 	<aside>
 		<section>
 			<h2>分类</h2>

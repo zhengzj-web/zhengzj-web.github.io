@@ -213,47 +213,146 @@
 </nav>
 
 	</header>
-	
-	  <!-- 今天学习到这里20230525 -->
-	<main>
-  
+	<main><div id="tags">
+  <!-- <h1>标签</h1> -->
 
   
 
-  
-  
-
-  
+  <!-- 暂存 tag -->
   
 
-  
-    
-    
-      
-      
-        伤寒论
-        1
-      
-    
-    
-    
-      
-      
-        黄帝内经
-        1
-      
-    
-    
+  <!-- 排序 -->
   
 
-  
-  伤寒论
+  <ul class="tag-inline-block p-0 m-0">
+    
+    <li>
+      <!-- <a href="/tags/乾坤大挪移">乾坤大挪移</a> -->
+      <a href="#%E4%B9%BE%E5%9D%A4%E5%A4%A7%E6%8C%AA%E7%A7%BB">
+        <span class="name">乾坤大挪移</span>
+        <span class="count">1</span>
+      </a>
+    </li>
+    
+    <li>
+      <!-- <a href="/tags/伤寒论">伤寒论</a> -->
+      <a href="#%E4%BC%A4%E5%AF%92%E8%AE%BA">
+        <span class="name">伤寒论</span>
+        <span class="count">2</span>
+      </a>
+    </li>
+    
+    <li>
+      <!-- <a href="/tags/黄帝内经">黄帝内经</a> -->
+      <a href="#%E9%BB%84%E5%B8%9D%E5%86%85%E7%BB%8F">
+        <span class="name">黄帝内经</span>
+        <span class="count">1</span>
+      </a>
+    </li>
+    
+  </ul>
 
   
+  <h3 class="tag-anchor-point is-active #%E4%B9%BE%E5%9D%A4%E5%A4%A7%E6%8C%AA%E7%A7%BB">乾坤大挪移</h3>
+
+  <ul class="tag-group">
     
+    <li>
+      <div class="box">
+        <a class="title" href="/%E4%BC%A4%E5%AF%92%E8%AE%BA/%E4%BC%A4%E5%AF%92%E8%AE%BA%E5%85%A8%E9%83%A8%E7%BB%8F%E6%96%B9/">伤寒论全部经方</a>
+        <span class="line-dashed"></span>
+        <span class="date text-tip">May 21, 2023</span>
+      </div>
+    </li>
     
-      
-        伤寒论全部经方...</main>
+  </ul>
+
+  
+  <h3 class="tag-anchor-point is-active #%E4%BC%A4%E5%AF%92%E8%AE%BA">伤寒论</h3>
+
+  <ul class="tag-group">
+    
+    <li>
+      <div class="box">
+        <a class="title" href="/%E9%BB%84%E5%B8%9D%E5%86%85%E7%BB%8F/%E9%BB%84%E5%B8%9D%E5%86%85%E7%BB%8F%E5%BC%80%E7%AF%87/">创建个人博客！</a>
+        <span class="line-dashed"></span>
+        <span class="date text-tip">May 22, 2023</span>
+      </div>
+    </li>
+    
+    <li>
+      <div class="box">
+        <a class="title" href="/%E4%BC%A4%E5%AF%92%E8%AE%BA/%E4%BC%A4%E5%AF%92%E8%AE%BA%E5%85%A8%E9%83%A8%E7%BB%8F%E6%96%B9/">伤寒论全部经方</a>
+        <span class="line-dashed"></span>
+        <span class="date text-tip">May 21, 2023</span>
+      </div>
+    </li>
+    
+  </ul>
+
+  
+  <h3 class="tag-anchor-point is-active #%E9%BB%84%E5%B8%9D%E5%86%85%E7%BB%8F">黄帝内经</h3>
+
+  <ul class="tag-group">
+    
+    <li>
+      <div class="box">
+        <a class="title" href="/%E9%BB%84%E5%B8%9D%E5%86%85%E7%BB%8F/%E9%BB%84%E5%B8%9D%E5%86%85%E7%BB%8F%E5%BC%80%E7%AF%87/">创建个人博客！</a>
+        <span class="line-dashed"></span>
+        <span class="date text-tip">May 22, 2023</span>
+      </div>
+    </li>
+    
+  </ul>
+
+  
+</div>
+
+<script>
+  const setActive = (key) => {
+    const el = document.getElementsByClassName(key)[0];
+    // el.scrollIntoView({
+    //   behavior: 'smooth',
+    // });
+
+    // toggle tag active status
+    document.querySelectorAll('.tag-anchor-point').forEach((dom) => {
+      dom.classList.remove('is-active');
+    });
+    el.classList.add('is-active');
+  };
+
+  window.onload = () => {
+    // 初始化标签
+    const key = location.hash;
+    if (key) setActive(key);
+
+    // 点击标签
+    document.getElementsByClassName('tag-inline-block')[0].addEventListener('click', (e) => {
+      setTimeout(() => {
+        const key = location.hash;
+        setActive(key);
+      }, 100);
+    });
+    document.querySelector('#trending-tags').addEventListener('click', (e) => {
+      if (e.target.tagName === 'SPAN') {
+        setTimeout(() => {
+          const key = location.hash;
+          setActive(key);
+        }, 100);
+      }
+    });
+    document.querySelector('.search-mask .res-tag-group').addEventListener('click', (e) => {
+      if (e.target.tagName === 'A') {
+        setTimeout(() => {
+          const key = location.hash;
+          setActive(key);
+        }, 100);
+      }
+    });
+  };
+</script>
+</main>
 	<aside>
 		<section>
 			<h2>分类</h2>
@@ -269,6 +368,8 @@
 		<section class="tagcloud">
 			<h2>标签</h2>
 			
+			
+				<a href="/tag/%E4%B9%BE%E5%9D%A4%E5%A4%A7%E6%8C%AA%E7%A7%BB">乾坤大挪移</a>
 			
 				<a href="/tag/%E4%BC%A4%E5%AF%92%E8%AE%BA">伤寒论</a>
 			

@@ -9,8 +9,7 @@ paginate: 10
 paginate_path: /page/:num/
 
 # 用于输出网站的后缀...github.io/黄帝内经开篇/
-permalink: /:title/
-
+permalink: posts/:title
 
 # --- 本地开发选项 ---
 # 如果你的网站是在本地托管的，而不是在GitHub上，那么你需要取消注释接下来的两个参数来设置url和baseurl
@@ -137,8 +136,6 @@ excerpt_length: 50
 # and RSS feed title
 title-separator: "-"
 
-# 添加category内容
-permalink: /:categories/:title/
 
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
