@@ -16,7 +16,6 @@
 	<link rel="stylesheet" href="/style/genericons.css">
 	<link rel="stylesheet" href="/style/highlight.css">
 	<link rel="stylesheet" href="/style/social.css">
-	<link rel="stylesheet" href="/style/bridge.css">
 	<link rel="stylesheet" href="/style/screen/44.375.css" media="screen and (min-width: 44.375em)">
 	<link rel="stylesheet" href="/style/screen/56.875.css" media="screen and (min-width: 56.875em)">
 	<link rel="stylesheet" href="/style/screen/61.5625.css" media="screen and (min-width: 61.5625em)">
@@ -31,7 +30,6 @@
   <!-- endif -->
   
 
-  <!-- 今天学习到这里20230525 -->
 
 	<header>
 		<div class="brand">
@@ -215,138 +213,47 @@
 </nav>
 
 	</header>
-	<main><div id="tags">
-  <!-- <h1>标签</h1> -->
+	
+	  <!-- 今天学习到这里20230525 -->
+	<main>
+  
 
   
 
-  <!-- 暂存 tag -->
+  
   
 
-  <!-- 排序 -->
+  
   
 
-  <ul class="tag-inline-block p-0 m-0">
+  
     
-    <li>
-      <!-- <a href="/tags/javascript">JavaScript</a> -->
-      <a href="#javascript">
-        <span class="name">JavaScript</span>
-        <span class="count">1</span>
-      </a>
-    </li>
     
-    <li>
-      <!-- <a href="/tags/伤寒论">伤寒论</a> -->
-      <a href="#%E4%BC%A4%E5%AF%92%E8%AE%BA">
-        <span class="name">伤寒论</span>
-        <span class="count">1</span>
-      </a>
-    </li>
+      
+      
+        伤寒论
+        1
+      
     
-    <li>
-      <!-- <a href="/tags/黄帝内经">黄帝内经</a> -->
-      <a href="#%E9%BB%84%E5%B8%9D%E5%86%85%E7%BB%8F">
-        <span class="name">黄帝内经</span>
-        <span class="count">1</span>
-      </a>
-    </li>
     
-  </ul>
+    
+      
+      
+        黄帝内经
+        1
+      
+    
+    
+  
 
   
-  <h3 class="tag-anchor-point is-active #javascript">JavaScript</h3>
-
-  <ul class="tag-group">
-    
-    <li>
-      <div class="box">
-        <a class="title" href="/%E6%8A%80%E6%9C%AF/interview_question_01/">JavaScript 基础练习（一）</a>
-        <span class="line-dashed"></span>
-        <span class="date text-tip">Jan 06, 2015</span>
-      </div>
-    </li>
-    
-  </ul>
+  伤寒论
 
   
-  <h3 class="tag-anchor-point is-active #%E4%BC%A4%E5%AF%92%E8%AE%BA">伤寒论</h3>
-
-  <ul class="tag-group">
     
-    <li>
-      <div class="box">
-        <a class="title" href="/%E4%BC%A4%E5%AF%92%E8%AE%BA/%E4%BC%A4%E5%AF%92%E8%AE%BA%E5%85%A8%E9%83%A8%E7%BB%8F%E6%96%B9/">伤寒论全部经方</a>
-        <span class="line-dashed"></span>
-        <span class="date text-tip">May 21, 2023</span>
-      </div>
-    </li>
     
-  </ul>
-
-  
-  <h3 class="tag-anchor-point is-active #%E9%BB%84%E5%B8%9D%E5%86%85%E7%BB%8F">黄帝内经</h3>
-
-  <ul class="tag-group">
-    
-    <li>
-      <div class="box">
-        <a class="title" href="/%E9%BB%84%E5%B8%9D%E5%86%85%E7%BB%8F/%E9%BB%84%E5%B8%9D%E5%86%85%E7%BB%8F%E5%BC%80%E7%AF%87/">创建个人博客！</a>
-        <span class="line-dashed"></span>
-        <span class="date text-tip">May 22, 2023</span>
-      </div>
-    </li>
-    
-  </ul>
-
-  
-</div>
-
-<script>
-  const setActive = (key) => {
-    const el = document.getElementsByClassName(key)[0];
-    // el.scrollIntoView({
-    //   behavior: 'smooth',
-    // });
-
-    // toggle tag active status
-    document.querySelectorAll('.tag-anchor-point').forEach((dom) => {
-      dom.classList.remove('is-active');
-    });
-    el.classList.add('is-active');
-  };
-
-  window.onload = () => {
-    // 初始化标签
-    const key = location.hash;
-    if (key) setActive(key);
-
-    // 点击标签
-    document.getElementsByClassName('tag-inline-block')[0].addEventListener('click', (e) => {
-      setTimeout(() => {
-        const key = location.hash;
-        setActive(key);
-      }, 100);
-    });
-    document.querySelector('#trending-tags').addEventListener('click', (e) => {
-      if (e.target.tagName === 'SPAN') {
-        setTimeout(() => {
-          const key = location.hash;
-          setActive(key);
-        }, 100);
-      }
-    });
-    document.querySelector('.search-mask .res-tag-group').addEventListener('click', (e) => {
-      if (e.target.tagName === 'A') {
-        setTimeout(() => {
-          const key = location.hash;
-          setActive(key);
-        }, 100);
-      }
-    });
-  };
-</script>
-</main>
+      
+        伤寒论全部经方...</main>
 	<aside>
 		<section>
 			<h2>分类</h2>
@@ -355,8 +262,6 @@
 				
 					<li><a href="/category/%E4%BC%A4%E5%AF%92%E8%AE%BA">伤寒论</a></li>
 				
-					<li><a href="/category/%E6%8A%80%E6%9C%AF">技术</a></li>
-				
 					<li><a href="/category/%E9%BB%84%E5%B8%9D%E5%86%85%E7%BB%8F">黄帝内经</a></li>
 				
 			</ul>
@@ -364,8 +269,6 @@
 		<section class="tagcloud">
 			<h2>标签</h2>
 			
-			
-				<a href="/tag/javascript">JavaScript</a>
 			
 				<a href="/tag/%E4%BC%A4%E5%AF%92%E8%AE%BA">伤寒论</a>
 			
@@ -379,8 +282,6 @@
 					<li><a href="/%E9%BB%84%E5%B8%9D%E5%86%85%E7%BB%8F/%E9%BB%84%E5%B8%9D%E5%86%85%E7%BB%8F%E5%BC%80%E7%AF%87/">创建个人博客！</a></li>
 				
 					<li><a href="/%E4%BC%A4%E5%AF%92%E8%AE%BA/%E4%BC%A4%E5%AF%92%E8%AE%BA%E5%85%A8%E9%83%A8%E7%BB%8F%E6%96%B9/">伤寒论全部经方</a></li>
-				
-					<li><a href="/%E6%8A%80%E6%9C%AF/interview_question_01/">JavaScript 基础练习（一）</a></li>
 				
 			</ul>
 		</section>

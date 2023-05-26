@@ -44,7 +44,6 @@
   <!-- endif -->
   {% endif %}
 
-  <!-- 今天学习到这里20230525 -->
 
 	<header>
 		<div class="brand">
@@ -55,16 +54,9 @@
 		<label class="toggle" for="ballot">菜单</label>
 		{% include navigation.liquid %}
 	</header>
-	<main>
-		<!-- 遍历分页后的文章 -->
-		{% for post in paginator.posts %}
-		<div class="item">
-			<h1 class="m-t-0 m-b-8"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-			<div class="content">{{ post.content | strip_html | truncate: 200 }}</div>
-			<div class="message text-tip p-t-16 p-b-0">
-			</div>
-		</div>
-	</main>
+	
+	  <!-- 今天学习到这里20230525 -->
+	<main>{{ content | replace: '♥', '<span class="redsuit">♥</span>' | replace: '♦', '<span class="redsuit">♦</span>'| strip_html | truncate: 200 }}</main>
 	<aside>
 		<section>
 			<h2>分类</h2>
