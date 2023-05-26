@@ -26,7 +26,6 @@
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/genericons.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/highlight.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/social.css">
-	<link rel="stylesheet" href="{{ site.baseurl }}/style/bridge.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/screen/44.375.css" media="screen and (min-width: 44.375em)">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/screen/56.875.css" media="screen and (min-width: 56.875em)">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/screen/61.5625.css" media="screen and (min-width: 61.5625em)">
@@ -56,7 +55,16 @@
 		<label class="toggle" for="ballot">菜单</label>
 		{% include navigation.liquid %}
 	</header>
-	<main>{{ content | replace: '♥', '<span class="redsuit">♥</span>' | replace: '♦', '<span class="redsuit">♦</span>' }}</main>
+	<main>
+		<!-- 遍历分页后的文章 -->
+		{% for post in paginator.posts %}
+		<div class="post-item">
+			<h1 class="m-t-0 m-b-8"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+			<div class="post-content">{{ post.content | strip_html | truncate: 200 }}</div>
+			<div class="post-message text-tip p-t-16 p-b-0">
+			</div>
+		</div>
+	</main>
 	<aside>
 		<section>
 			<h2>分类</h2>
