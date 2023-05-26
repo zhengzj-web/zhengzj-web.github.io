@@ -1,0 +1,26 @@
+<aside>
+  <section>
+    <h2>分类</h2>
+    <ul>
+      {% assign categories = site.categories | sort %}
+      {% for category in categories %}
+        <li><a href="{{ site.baseurl }}/category/{{ category[0] | slugify | uri_escape }}">{{ category[0] }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  <section class="tagcloud">
+    <h2>标签</h2>
+    {% assign tags = site.tags | sort %}
+    {% for tag in tags %}
+      <a href="{{ site.baseurl }}/tag/{{ tag[0] | slugify | uri_escape }}">{{ tag[0] }}</a>
+    {% endfor %}
+  </section>
+  <section>
+    <h2>近期文章</h2>
+    <ul>
+      {% for post in site.posts limit: 5 %}
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+</aside>
