@@ -20,10 +20,10 @@ tags: [Github pages, Jekyll]
 
 安装Jekyll需要在cmd中完成。打开`cmd.exe`(命令提示符)，输入常用命令，如下：
 
-   - 卸载Jekyll：`gem uninstall jekyll`
-   - 安装最新版本Jekyll：`gem install jekyll`
-   - 安装3.8.7版本Jekyll：`gem install jekyll -v3.8.7`
-   - 检查Jekyll是否安装成功：`ruby -v`，显示出具体版本号即为安装成功。
+- 卸载Jekyll：`gem uninstall jekyll`
+- 安装最新版本Jekyll：`gem install jekyll`
+- 安装3.8.7版本Jekyll：`gem install jekyll -v3.8.7`
+- 检查Jekyll是否安装成功：`ruby -v`，显示出具体版本号即为安装成功。
 
 ## 1.3 启动Jekyll服务
 
@@ -32,3 +32,4 @@ Jekyll环境搭建完成之后，在cmd中进入到网站项目文件夹（以�
 若没有异常，启动服务后的默认端口为4000，浏览器地址栏输入 `127.0.0.1/4000` 即可访问。
 
 常见异常如下：
+- Could not find gem 'rake (~> 10. 0) x64-mingw32' in any of the gem sources listed in your Gemfile.：`bundle install`
