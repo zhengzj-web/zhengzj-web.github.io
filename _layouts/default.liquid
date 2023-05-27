@@ -15,12 +15,6 @@
 		<title>{{ page.title }} – {{ site.title }}</title>
 	{% endif %}
 
-{% comment %}
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:,i,b,bi,900,900i%7CMontserrat:,b%7CInconsolata:,b&amp;display=swap">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:100,300,400,500,700,900&amp;display=swap">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Serif+TC:,b,900&amp;display=fallback">
-{% endcomment %}
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/main.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/clearings.css">
 	<link rel="stylesheet" href="{{ site.baseurl }}/style/genericons.css">
@@ -34,19 +28,9 @@
 </head>
 
 <body>
-	{% if page.url contains "posts" %}
-  <!-- 文章详情页面，右侧边栏只有文章目录索引卡片弹性置顶 -->
-  {% assign aside_sticky = "" %}
-  <!-- else -->
-  {% else %}
-  <!-- 非文章详情页面，右侧边栏所有卡片弹性置顶 -->
-  {% assign aside_sticky = "aside-sticky" %}
-  <!-- endif -->
-  {% endif %}
-
-  {% include header.html %}
+  <header>{% include header.html %}</header>
 	<main>{{ content }}</main>
-	{% include aside.html %}
-	{% include footer.html %}
+	<aside>{% include aside.html %}</aside>
+	<footer>{% include footer.html %}</footer>
 </body>
 </html>

@@ -1,3 +1,4 @@
+// 此段代码用于统计访问量
 var bszCaller, bszTag;
 !function() {
     var c, d, e, a = !1, b = [];

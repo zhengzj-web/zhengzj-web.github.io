@@ -1,17 +1,17 @@
-# --- 导航栏选项 --- #
-
-# List of links in the navigation bar
+# --- 导航栏(菜单，navigation bar)选项 --- #
 - title: 主页
   href: https://zhengzj-web.github.io
 - title: 所有文章
   children:
     - title: 分类
-      href: categories.html
+      href: /categories.html
     - title: 标签
-      href: tags.html
+      href: /tags.html
 - title: 汉唐中医
   href: /汉唐中医/
   children:
+    - title: 易经
+      href: /易经/
     - title: 黄帝内经
       href: /黄帝内经/
     - title: 神农本草
@@ -22,12 +22,14 @@
       href: /杂病论/
     - title: 针灸火罐
       href: /针灸火罐/
-- title: 结构工程
-  href: https://zhengzj-web.github.io/structure_engineering/
-- title: WEB开发
-  href: https://zhengzj-web.github.io/web_skill/
+- title: 其他
+  children:
+    - title: 结构工程
+      href: /structure_engineering/
+    - title: WEB开发
+      href: /web_skill/
 - title: 关于
-  href: https://zhengzj-web.github.io/about_me/
+  href: /about_me/
 
 
 # Image to show in the navigation bar - image must be a square (width = height)
