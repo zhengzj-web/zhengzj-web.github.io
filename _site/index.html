@@ -11,16 +11,17 @@
 		<link rel="alternate" type="application/atom+xml" href="/feed.atom">
 	
 
-	<link rel="stylesheet" href="/style/main.css">
-	<link rel="stylesheet" href="/style/clearings.css">
-	<link rel="stylesheet" href="/style/genericons.css">
-	<link rel="stylesheet" href="/style/highlight.css">
-	<link rel="stylesheet" href="/style/social.css">
-	<link rel="stylesheet" href="/style/screen/44.375.css" media="screen and (min-width: 44.375em)">
-	<link rel="stylesheet" href="/style/screen/56.875.css" media="screen and (min-width: 56.875em)">
-	<link rel="stylesheet" href="/style/screen/61.5625.css" media="screen and (min-width: 61.5625em)">
-	<link rel="stylesheet" href="/style/screen/85.125.css" media="only screen and (min-width: 85.125em)">
-	<link rel="stylesheet" href="/style/print.css" media="only print">
+	<link rel="stylesheet" href="/assets/css/main.css">
+	<link rel="stylesheet" href="/assets/css/self_color.css">
+	<link rel="stylesheet" href="/assets/css/clearings.css">
+	<link rel="stylesheet" href="/assets/css/genericons.css">
+	<link rel="stylesheet" href="/assets/css/highlight.css">
+	<link rel="stylesheet" href="/assets/css/social.css">
+	<link rel="stylesheet" href="/assets/css/screen/44.375.css" media="screen and (min-width: 44.375em)">
+	<link rel="stylesheet" href="/assets/css/screen/56.875.css" media="screen and (min-width: 56.875em)">
+	<link rel="stylesheet" href="/assets/css/screen/61.5625.css" media="screen and (min-width: 61.5625em)">
+	<link rel="stylesheet" href="/assets/css/screen/85.125.css" media="only screen and (min-width: 85.125em)">
+	<link rel="stylesheet" href="/assets/css/print.css" media="only print">
 </head>
 
 <body>
@@ -185,7 +186,7 @@
 	<ul>
 		
 			<li>
-				<a href="/structure_engineering/">
+				<a href="/structure_engineering">
 					
 
 					
@@ -197,7 +198,7 @@
 			</li>
 		
 			<li>
-				<a href="/web_skill/">
+				<a href="/web_skill">
 					
 
 					
@@ -214,7 +215,7 @@
 			</li>
 		
 			<li>
-				<a href="/about_me/">
+				<a href="/about_me">
 					
 
 					
@@ -229,6 +230,8 @@
 
 </nav>
 <nav class="social">
+	
+		<a href="["github", {"name"=>"GitHub", "baseURL"=>"https://github.com/zheng-zj", "icon"=>"fa-github"}]"></a>
 	
 </nav>
 
@@ -252,20 +255,46 @@
 
 <p>安装Jekyll需要在cmd中完成。打开<code class="language-console highlighter-rouge"><span class="go">cmd.exe</span></code>(命令提示符)，输入常用命令，如下：</p>
 
-<ul>
+<ol>
   <li>卸载Jekyll：<code class="language-console highlighter-rouge"><span class="go">gem uninstall jekyll</span></code></li>
   <li>安装最新版本Jekyll：<code class="language-console highlighter-rouge"><span class="go">gem install jekyll</span></code></li>
   <li>安装3.8.7版本Jekyll：<code class="language-console highlighter-rouge"><span class="go">gem install jekyll -v3.8.7</span></code></li>
   <li>检查Jekyll是否安装成功：<code class="language-console highlighter-rouge"><span class="go">ruby -v</span></code>，显示出具体版本号即为安装成功。</li>
-</ul>
+</ol>
 
 <h2 id="13-启动jekyll服务">1.3 启动Jekyll服务</h2>
 
-<p>Jekyll环境搭建完成之后，在cmd中进入到网站项目文件夹（以本站为例，即为zhengzj-web.github.io文件夹）下，输入启动命令：<code class="language-console highlighter-rouge"><span class="go">jekyll server</span></code>。</p>
+<p>Jekyll环境搭建完成之后，在cmd中进入到网站项目文件夹下，输入启动命令：<code class="language-console highlighter-rouge"><span class="go">jekyll server</span></code>。</p>
 
 <p>若没有异常，启动服务后的默认端口为4000，浏览器地址栏输入 <code class="language-console highlighter-rouge"><span class="go">127.0.0.1/4000</span></code> 即可访问。</p>
 
+<p><img src="/assets/img/web_skill/jekyll server.png" alt="" /></p>
+
 <p>常见异常如下：</p>
+<ul>
+  <li>Could not find gem ‘rake (~&gt; 10. 0) x64-mingw32’ in any of the gem sources listed in your Gemfile.：<code class="language-console highlighter-rouge"><span class="go">bundle install</span></code></li>
+  <li>error:permission denied -bind(2) for 127.0.0.1:4000：<a href="https://segmentfault.com/q/1010000010483290">详见此处</a></li>
+</ul>
+
+<h1 id="2-网站开发基础">2. 网站开发基础</h1>
+
+<p>一个网站由许多文件组成：文本内容(.html、.md等)、代码、样式表、媒体内容，等等。当你建立一个网站时，你需要将这些文件组合成一个合理的结构，并确保它们能够相互交流。</p>
+
+<h2 id="21-html基础">2.1 HTML基础</h2>
+
+<p>HTML不是一门编程语言，而是一种用来结构化Web网页及其内容的标记语言。HTML由一系列的元素组成，这些元素可以用来包围不同部分的内容，使其以某种方式呈现或者工作。一对标签可以为一段文字或者一张图片添加超链接，将文字设置为斜体，改变字号，等等。例如，键入下面一行内容：</p>
+
+<h2 id="22-css基础">2.2 CSS基础</h2>
+
+<p>和HTML类似，CSS也不是真正的编程语言，甚至不是标记语言。CSS是一门样式表语言，这也就是说人们可以用它来选择性地为 HTML元素添加样式。举例来说，以下CSS代码选择了所有的段落文字，并将它们设置为红色。</p>
+
+<h2 id="23-javascript基础">2.3 JavaScript基础</h2>
+
+<p>JavaScript是一门编程语言，可为网站添加交互功能（例如：游戏、动态样式、动画以及在按下按钮或收到表单数据时做出的响应等）。</p>
+
+<h2 id="24-jekyll相关内容">2.4 Jekyll相关内容</h2>
+
+<p><a href="http://jekyllcn.com/docs/structure/">Jekyll官网</a></p>
 </section>
 			
 		</div>
@@ -297,6 +326,10 @@
 		<div class="content">
 			
 				<p>本文记录了我刚学习 JavaScript 时遇到的一些练习题，刚看到时可能会感觉很简单，但其中包含了一些容易被忽视的知识点，也从另一个方面体现了基础对于程序员是多么重要。</p>
+
+<blockquote>
+  <p>string.indexOf(str,start);</p>
+</blockquote>
 
 <p>练习题的解答大多是我自己的理解，可能会存在思考不足的情况，或许有其他更优的解答，热烈欢迎大家拍砖指教。</p>
 
@@ -333,51 +366,48 @@
 		</footer>
 	</article>
 
-	<article class="post ">
-		<header><h2><a href="/posts/%E4%BC%A4%E5%AF%92%E8%AE%BA%E5%85%A8%E9%83%A8%E7%BB%8F%E6%96%B9" rel="bookmark">伤寒论全部经方</a></h2></header>
-		<div class="content">
+
+
+
+
+
+	<nav class="pagination">
+		
+
+		
+
+		
+
+		<strong>1</strong>
+
+		
+			<a rel="next" href="/page/2/">2</a>
+
 			
-				<p>本文记录了我刚学习 JavaScript 时遇到的一些练习题，刚看到时可能会感觉很简单，但其中包含了一些容易被忽视的知识点，也从另一个方面体现了基础对于程序员是多么重要。</p>
-
-<p>练习题的解答大多是我自己的理解，可能会存在思考不足的情况，或许有其他更优的解答，热烈欢迎大家拍砖指教。</p>
-
-<p>因为练习题数量较多，篇幅太长不方便阅读，所以我分成了几个部分，跳转链接放在本文最后。</p>
-
-<h1 id="1-数据收集">1. 数据收集</h1>
-
-<section> <h2 id="11-sqoop">1.1. Sqoop</h2>
-
-<p>Sqoop是为了就解决关系数据库与Hadoop之间数据传输问题，构建了这两者之间的“桥梁”。</p>
-</section>
 			
-		</div>
-		<footer>
-			<div>
-				<a href="/posts/%E4%BC%A4%E5%AF%92%E8%AE%BA%E5%85%A8%E9%83%A8%E7%BB%8F%E6%96%B9" rel="bookmark">
-					<time>2023-05-21</time>
-				</a>
-			</div>
-			<div>分类：
-				
-					<a rel="category tag" href="/category/伤寒论">
-						伤寒论</a>
-				
-				
-			</div>
-			<div>标签：
-				<a rel="tag" href="/tag/伤寒论">
-					伤寒论</a>,
+
 			
-				<a rel="tag" href="/tag/乾坤大挪移">
-					乾坤大挪移</a>
-			</div>
-		</footer>
-	</article>
+		
 
+		
+			<span class="prev"></span>
+		
 
+		
+			<a class="next" rel="next" href="/page/2/"></a>
+		
+	</nav>
 
-
-
+	
+		<template id="loader">
+			<link rel="stylesheet" href="loader.css">
+			<button type="button" id="load">較舊貼文</button>
+		</template>
+		<script type="module">
+			import load from "./load.js";
+			load(2);
+		</script>
+	
 
 
 
@@ -440,7 +470,7 @@
 </aside>
 	<footer>  <!--添加访问统计、使用主题标识-->
   <p  class="theme-by text-muted">
-  <script src="/js/busuanzi.pure.mini.js"></script>
+  <script src="/assets/js/busuanzi.pure.mini.js"></script>
   <span id="busuanzi_container_site_pv">
     本站访问量<span id="busuanzi_value_site_pv"></span>次。
     <br>

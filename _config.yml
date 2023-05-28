@@ -4,11 +4,12 @@ title: zhengzejun's web
 # Short description of your site
 description: 学而不思则罔，思而不学则怠。
 
-# Pagination
-paginate: 10
+# 输出
+paginate: 2
 paginate_path: /page/:num/
+timezone: Asia/Shanghai
 
-# 用于输出网站的后缀...github.io/黄帝内经开篇/
+# 文章的永久链接格式，可以在permalink这里配置，例如，...github.io/黄帝内经开篇/
 permalink: posts/:title
 
 # --- 本地开发选项 ---
@@ -36,14 +37,15 @@ permalink: posts/:title
 # Alternatively, the navbar, footer, and page background can be set to use background images
 # instead of colour
 
-# navbar-img: "/img/bgimage.png"
-# footer-img: "/img/bgimage.png"
-# page-img: "/img/bgimage.png"
+# navbar-img: "/assets/img/bgimage.png"
+# footer-img: "/assets/img/bgimage.png"
+# page-img: "/assets/img/bgimage.png"
 
 # --- 页脚选项 --- #
 # 更改所有值或删除那些您不想要的值。
 # 重要：必须保留“name”参数，其他所有可以删除的内容
-name: ZhengZejun
+author:
+  name: ZhengZejun
 
 #选择你活跃的社交网络链接。
 #取消注释您要在页脚中显示的链接，并将您的信息添加到每个链接中。
@@ -140,7 +142,7 @@ title-separator: "-"
 # --- Don't need to touch anything below here (but you can if you want) --- #
 
 # Output options (more information on Jekyll's site)
-timezone: Asia/Shanghai
+
 markdown: kramdown  # [ maruku | rdiscount | kramdown | redcarpet ]
 kramdown:
   input: GFM
@@ -160,11 +162,11 @@ highlighter: rouge
 
 
 
-# Default YAML values (more information on Jekyll's site)
+# 默认YAML值 (more information on Jekyll's site)
 defaults:
   -
     scope:
-      path: ""
+      path: "" # all files
       type: "posts"
     values:
       layout: "post"
@@ -173,6 +175,7 @@ defaults:
   -
     scope:
       path: "" # all files
+      type: "pages"
     values:
       layout: "page"
       show-avatar: true
@@ -202,9 +205,9 @@ prose:
     - _config.yml
     - /_layouts
     - /_includes
-    - /css
-    - /img
-    - /js
+    - /assets/css
+    - /assets/img
+    - /assets/js
   metadata:
     _posts:
       - name: "layout"

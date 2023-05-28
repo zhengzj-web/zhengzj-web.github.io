@@ -3,7 +3,7 @@ html::after {
 	background: #1a1a1a;
 	content: "";
 	display: block;
-	height: 21px;
+	height: 15px;
 	left: 0;
 	position: fixed;
 	width: 100%;
