@@ -4,14 +4,15 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
+	<!--  网页标签内容    -->
 	
-
 	
 		<title>关于我 – zhengzejun's web</title>
 	
 
 	<link rel="stylesheet" href="/assets/css/main.css">
-	<link rel="stylesheet" href="/assets/css/self_color.css">
+	<link rel="stylesheet" href="/assets/css/custom_color.css">
+	<link rel="stylesheet" href="/assets/css/calendar.css">
 	<link rel="stylesheet" href="/assets/css/clearings.css">
 	<link rel="stylesheet" href="/assets/css/genericons.css">
 	<link rel="stylesheet" href="/assets/css/highlight.css">
@@ -249,7 +250,32 @@
 </div>
 </article>
 </main>
-	<aside>  <section>
+	<aside><!--      <script src="/assets/js/calendar.js"></script>
+<div class="calendar">
+  <h5 class="green" id="calendar-title">Month</h5>
+  <h6 class="green small" id="calendar-year">Year</h6>
+  <a href="" id="prev">Prev Month</a>
+  <a href="" id="next">Next Month</a>
+</div>
+<div class="body">
+  <div class="lightgrey body-list">
+    <ul>
+      <li>MON</li>
+      <li>TUE</li>
+      <li>WED</li>
+      <li>THU</li>
+      <li>FRI</li>
+      <li>SAT</li>
+      <li>SUN</li>
+    </ul>
+  </div>
+  <div class="darkgrey body-list">
+    <ul id="days">
+    </ul>
+  </div>
+</div>
+ -->
+  <section>
     <h2>分类</h2>
     <ul>
       
@@ -311,5 +337,29 @@
   </span>
   </p>
 </footer>
+	<div id="back2top">
+  <a href="#top" title="回到顶部">
+  <i class="bt-line"></i>
+</a>
+</div>
+<script type="text/javascript">
+$("#back2top").hide();
+$(document).ready(function () {
+$(window).scroll(function () {
+  if ($(this).scrollTop() > 100) {
+    $('#back2top').fadeIn();
+  } else {
+    $('#back2top').fadeOut();
+  }
+});
+$('#back2top a').click(function () {
+  $('body,html').animate({
+    scrollTop: 0
+  }, 500);
+  return false;
+});
+});
+</script>
+
 </body>
 </html>

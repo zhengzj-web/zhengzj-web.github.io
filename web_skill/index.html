@@ -55,11 +55,11 @@ layout: default
 
 	{% if paginator.page == 1 %}
 		<template id="loader">
-			<link rel="stylesheet" href="loader.css">
+			<link rel="stylesheet" href="assets/css/loader.css">
 			<button type="button" id="load">較舊貼文</button>
 		</template>
 		<script type="module">
-			import load from "./load.js";
+			import load from "./assets/js/load.js";
 			load({{ paginator.total_pages }});
 		</script>
 	{% endif %}

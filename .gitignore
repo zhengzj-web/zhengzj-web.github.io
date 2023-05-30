@@ -1,0 +1,10 @@
+# project
+_site/
+_drafts/
+.sass-cache
+.vagrant
+
+# general
+.DS_Store
+Thumbs.db
+ehthumbs.db

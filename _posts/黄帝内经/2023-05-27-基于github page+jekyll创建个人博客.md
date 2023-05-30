@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 基于github page+jekyll创建个人博客
+typical: webskill
 category: Github
 tags: [Github pages, Jekyll]
 ---
@@ -56,3 +57,7 @@ JavaScript是一门编程语言，可为网站添加交互功能（例如：游�
 ## 2.4 Jekyll相关内容
 
 [Jekyll官网](http://jekyllcn.com/docs/structure/)
+
+## 2.5 网页目录结构
+
+[Jekyll 网页目录结构](https://jekyllrb.com/docs/structure/)

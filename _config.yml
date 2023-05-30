@@ -5,7 +5,7 @@ title: zhengzejun's web
 description: 学而不思则罔，思而不学则怠。
 
 # 输出
-paginate: 2
+paginate: 10
 paginate_path: /page/:num/
 timezone: Asia/Shanghai
 

@@ -184,6 +184,33 @@ td {
   color: #686868;
   opacity: 1; }
 
+/* back2top btn */
+/*  Back Top Button  */
+#back2top {
+  position: fixed;
+  bottom: 30px;
+  right: 0%;
+  margin-right: 40px;
+  background-color: #aaa;
+  -webkit-border-radius: 7px;
+  -moz-border-radius: 7px;
+  border-radius: 7px;
+  -webkit-transition: 0.7s;
+  -moz-transition: 0.7s;
+  transition: 0.7s;
+  /*behavior: url(/css/PIE.htc);*/ }
+
+/*#back2top:hover {
+  background-color: #777;
+}*/
+#back2top a {
+  background: #ddd url(/assets/img/bg_up_arrow.png) no-repeat center center;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 14px;
+  display: inline-block; }
+
+/* back2top btn end */
 input {
   line-height: normal; }
 
