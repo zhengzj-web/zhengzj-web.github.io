@@ -32,7 +32,7 @@ Jekyll环境搭建完成之后，在cmd中进入到网站项目文件夹下，�
 
 若没有异常，启动服务后的默认端口为4000，浏览器地址栏输入 `127.0.0.1/4000` 即可访问。
 
-![](/assets/img/web_skill/jekyll server.png)
+![](/assets/img/webskill/jekyll server.png)
 
 常见异常如下：
 - Could not find gem 'rake (~> 10. 0) x64-mingw32' in any of the gem sources listed in your Gemfile.：`bundle install`
