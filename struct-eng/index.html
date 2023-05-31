@@ -1,10 +1,10 @@
 ---
 layout: default
 ---
-{% include webskill_series.liquid posts=paginator.posts %}
+{% include struct_eng_series.liquid posts=paginator.posts %}
 
 {% unless paginator.posts %}
-	<header><h1 class="title">什么都没找到ma</h1></header>
+	<header><h1 class="title">什么都没找到</h1></header>
 	<p>
 		沒有找到你要的内容。
 		{% comment %} 也许你可以搜寻一下看看。 {% endcomment %}
@@ -14,7 +14,7 @@ layout: default
 {% if paginator.total_pages > 1 %}
 	<nav class="pagination">
 		{% if paginator.page > 1 %}
-			<a rel="start" href="{{ site.baseurl }}/">1</a>
+			<a rel="start" href="{{ site.baseurl }}/">page1</a>
 		{% endif %}
 
 		{% if paginator.previous_page > 2 %}
@@ -22,7 +22,7 @@ layout: default
 		{% endif %}
 
 		{% if paginator.previous_page > 1 %}
-			<a rel="prev" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">{{ paginator.previous_page }}</a>
+			<a rel="prev" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">page{{ paginator.previous_page }}</a>
 		{% endif %}
 
 		<strong>{{ paginator.page }}</strong>

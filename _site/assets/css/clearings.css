@@ -1,3 +1,4 @@
+/*用于控制文章空间向下移动以清除左右浮动。*/
 article::after {
 	clear: both;
 	content: "";

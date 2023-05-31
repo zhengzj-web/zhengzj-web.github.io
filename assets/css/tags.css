@@ -1,0 +1,106 @@
+#tags {
+  list-style: none;
+}
+#tags ul.tag-inline-block li {
+  display: inline-block;
+  margin: 0 0.08rem 0.08rem 0;
+}
+#tags ul.tag-inline-block li a {
+  display: inline-block;
+  color: var(--white);
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 0.03rem;
+}
+#tags ul.tag-inline-block li a .name {
+  float: left;
+  background: var(--tag-text-bg);
+  padding: 0 0.08rem;
+}
+#tags ul.tag-inline-block li a .count {
+  float: left;
+  background: var(--tag-number-bg);
+  padding: 0 0.06rem;
+}
+#tags ul.tag-inline-block li a:hover {
+  border: none !important;
+  box-shadow: 0 0 5px var(--tag-number-bg);
+}
+#tags ul.tag-inline-block li a:hover .name {
+  background: var(--tag-number-bg);
+}
+#tags .tag-anchor-point {
+  display: none;
+  padding: 0.8rem 0 0 0;
+  margin: -0.6rem 0 0 0;
+}
+#tags .tag-anchor-point.is-active {
+  display: block;
+}
+#tags .tag-anchor-point.is-active + .tag-group {
+  display: block;
+}
+#tags ul:not(.tag-inline-block) {
+  line-height: 2;
+}
+#tags ul.tag-group {
+  display: none;
+  padding-left: 1.5rem;
+}
+#tags ul.tag-group .box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+#tags ul.tag-group .title {
+  margin-left: 0.2rem;
+  border-bottom: 1px solid transparent;
+}
+#tags ul.tag-group .date {
+  display: inline-block;
+  width: 0.9rem;
+  margin-left: -1.1rem;
+}
+#tag ul {
+  line-height: 2;
+}
+#tag ul li {
+  display: flex;
+}
+#tag ul .line-dashed {
+  flex: 1;
+  border-bottom: 1px dashed #ccc;
+  margin: 0 0.1rem 0.1rem 0.1rem;
+}
+#trending-tags ul.tag-inline-block li {
+  display: inline-block;
+  margin: 0 0.08rem 0.08rem 0;
+}
+#trending-tags ul.tag-inline-block li a {
+  display: inline-block;
+  color: var(--white);
+  text-decoration: none;
+  overflow: hidden;
+  border-radius: 0.03rem;
+}
+#trending-tags ul.tag-inline-block li a .name {
+  float: left;
+  background: var(--tag-text-bg);
+  padding: 0 0.08rem;
+}
+#trending-tags ul.tag-inline-block li a .count {
+  float: left;
+  background: var(--tag-number-bg);
+  padding: 0 0.06rem;
+}
+#trending-tags ul.tag-inline-block li a:hover {
+  border: none !important;
+  box-shadow: 0 0 5px var(--tag-number-bg);
+}
+#trending-tags ul.tag-inline-block li a:hover .name {
+  background: var(--tag-number-bg);
+}
+#trending-tags a {
+  font-size: 0.14rem;
+}

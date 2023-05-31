@@ -115,7 +115,7 @@ main > nav {
 }
 
 .pagination {
-	font-size: 1.1875rem;
+	font-size: 1.25rem;
 	position: relative;
 }
 
@@ -140,8 +140,8 @@ main > nav {
 .pagination > .next {
 	background-color: #1a1a1a;
 	display: inline;
-	width: 52px;
-	height: 52px;
+	width: 30px;
+	height: 30px;
 	margin: 0;
 	padding: 0;
 	outline: 0;
@@ -154,23 +154,23 @@ main > nav {
 }
 
 .pagination > a::after {
-	color: #fff;
+	color: #ffffff;
 }
 
 .pagination > span::after {
-	color: rgba(255, 255, 255, 0.3);
+	color: rgba(255, 255, 255, 0.7);
 }
 
 .pagination > .prev::after,
 .pagination > .next::after {
 	font-family: Genericons;
-	font-size: 32px;
-	line-height: 48px;
-	width: 52px;
+	font-size: 30px;
+	line-height: 30px;
+	width: 30px;
 }
 
 .pagination > .prev {
-	right: 54px;
+	right: 40px;
 }
 
 .pagination > .next {

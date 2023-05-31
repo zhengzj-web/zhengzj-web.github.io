@@ -52,17 +52,6 @@ layout: default
 			<span class="next"></span>
 		{% endif %}
 	</nav>
-
-	{% if paginator.page == 1 %}
-		<template id="loader">
-			<link rel="stylesheet" href="assets/css/loader.css">
-			<button type="button" id="load">較舊貼文</button>
-		</template>
-		<script type="module">
-			import load from "./assets/js/load.js";
-			load({{ paginator.total_pages }});
-		</script>
-	{% endif %}
 {% endif %}
 
 {% assign entry = site.data.menu | where: "href", page.url %}

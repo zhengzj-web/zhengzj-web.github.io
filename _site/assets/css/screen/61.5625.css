@@ -53,12 +53,12 @@ article > header > * {
 
 .post > .content {
 	float: right;
-	width: 71.4285714285714285%
+	width: 70%
 }
 
 article > footer {
 	display: block;
-	padding-top: 0.125rem;
+	padding-top: 0;
 }
 
 article > footer > div::before {

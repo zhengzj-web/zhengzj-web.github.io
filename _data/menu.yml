@@ -25,9 +25,9 @@
 - title: 其他
   children:
     - title: 结构工程
-      href: /structure_engineering
+      href: /struct-eng/
     - title: WEB开发
-      href: /webskill
+      href: /webskill/
 - title: 关于
   href: /about_me
 

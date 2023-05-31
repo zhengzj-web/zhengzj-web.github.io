@@ -387,7 +387,7 @@ main > nav {
   text-transform: uppercase; }
 
 .pagination {
-  font-size: 1.1875rem;
+  font-size: 1.25rem;
   position: relative; }
 
 .pagination > * {
@@ -408,8 +408,8 @@ main > nav {
 .pagination > .next {
   background-color: #1a1a1a;
   display: inline;
-  width: 52px;
-  height: 52px;
+  width: 30px;
+  height: 30px;
   margin: 0;
   padding: 0;
   outline: 0;
@@ -420,20 +420,20 @@ main > nav {
   background-color: #007acc; }
 
 .pagination > a::after {
-  color: #fff; }
+  color: #ffffff; }
 
 .pagination > span::after {
-  color: rgba(255, 255, 255, 0.3); }
+  color: rgba(255, 255, 255, 0.7); }
 
 .pagination > .prev::after,
 .pagination > .next::after {
   font-family: Genericons;
-  font-size: 32px;
-  line-height: 48px;
-  width: 52px; }
+  font-size: 30px;
+  line-height: 30px;
+  width: 30px; }
 
 .pagination > .prev {
-  right: 54px; }
+  right: 40px; }
 
 .pagination > .next {
   right: 0px; }
@@ -502,7 +502,7 @@ video {
 
 body {
   margin: 0 auto;
-  max-width: 82.5em;
+  max-width: 71.5em;
   word-wrap: break-word; }
 
 header h1,

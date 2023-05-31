@@ -5,12 +5,12 @@ title: zhengzejun's web
 description: 学而不思则罔，思而不学则怠。
 
 # 输出
-paginate: 10
-paginate_path: /page/:num/
+paginate: 3
+paginate_path: page/:num/
 timezone: Asia/Shanghai
 
 # 文章的永久链接格式，可以在permalink这里配置，例如，...github.io/黄帝内经开篇/
-permalink: posts/:title
+permalink: /:categories/:title
 
 # --- 本地开发选项 ---
 # 如果你的网站是在本地托管的，而不是在GitHub上，那么你需要取消注释接下来的两个参数来设置url和baseurl

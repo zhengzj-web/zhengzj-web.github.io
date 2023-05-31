@@ -1,5 +1,5 @@
 body {
-	padding: 0 4.54545454545454545%
+	padding: 0 4%
 }
 
 body > header {
@@ -117,7 +117,7 @@ main {
 	float: left;
 	margin-right: -100%;
 	padding: 0;
-	width: 70%;
+	width: 73%;
 }
 
 article {
@@ -126,7 +126,7 @@ article {
 
 aside {
 	float: left;
-	margin-left: 75%;
+	margin-left: 77%;
 	padding: 0;
 	width: 25%;
 }
@@ -134,19 +134,21 @@ aside {
 aside > section {
 	font-size: 0.8125rem;
 	line-height: 1.3125rem;
+	margin-bottom: 1em;
 }
 
 aside > section > h2 {
-	margin-bottom: 1.3125em;
+	font-size: 1rem;
+	margin-top: -0.5em;
+	margin-bottom: 0.75em;
 }
 
 .tagcloud > a {
-	margin: 0 0.1875rem 0.4375rem 0;
-	padding: 0.4375rem 0.375rem 0.375rem;
+	padding: 0.3rem 0.3rem 0.3rem;
 }
 
 footer {
-	padding: 0 0 3.5rem;
+	padding: 0 0 1rem;
 }
 
 body > footer {
