@@ -1,7 +1,7 @@
 # --- 导航栏(菜单，navigation bar)选项 --- #
 - title: 主页
   href: https://zhengzj-web.github.io
-- title: 所有文章
+- title: 文章List
   children:
     - title: 分类
       href: /categories.html

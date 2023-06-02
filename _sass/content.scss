@@ -234,3 +234,17 @@ article > footer > * + div:not(:empty)::before {
 	width: device-width;
 	zoom: 1;
 }
+/* text */
+.text-tip {
+  color: var(--disabled);
+  font-size: 0.14rem;
+}
+/* text end */
+/* cursor */
+.cursor-not-allowed {
+  cursor: not-allowed;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+/* cursor end */

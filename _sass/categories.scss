@@ -1,0 +1,50 @@
+#categories ul.tabs {
+  list-style: none;
+  margin-bottom: 0.3rem;
+}
+#categories ul.tabs li {
+  display: inline-block;
+  margin-right: 0.4rem;
+  border-bottom: 0.03rem solid transparent;
+}
+#categories ul.tabs li.is-active {
+  border-bottom: 0.03rem solid var(--border);
+}
+#categories .tag-anchor-point {
+  padding: 0.8rem 0 0 0;
+  margin: -0.6rem 0 0 0;
+}
+#categories ul {
+  line-height: 2;
+}
+#categories ul.category-group {
+  display: none;
+  padding-left: 1.5rem;
+}
+#categories ul.category-group .box {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+#categories ul.category-group .title {
+  margin-left: 0.2rem;
+  border-bottom: 1px solid transparent;
+}
+#categories ul.category-group .date {
+  display: inline-block;
+  width: 5rem;
+  margin-left: 1rem;
+}
+#category ul {
+  line-height: 2;
+  list-style: none;
+}
+#category li {
+  display: flex;
+}
+#category .line-dashed {
+  flex: 1;
+  border-bottom: 1px dashed #ccc;
+  margin: 0 0.1rem 0.1rem;
+}
