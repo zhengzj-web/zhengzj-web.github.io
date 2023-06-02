@@ -1,0 +1,68 @@
+#post-menu {
+  min-height: 0.24rem;
+  font-size: 0.14rem;
+  overflow-y: auto;
+  z-index: 1;
+}
+#post-menu .sidebar-panel-box {
+  background-clip: content-box;
+}
+#post-menu .pin {
+  width: 100%;
+  height: 0.24rem;
+  border-left: 0.03rem solid var(--brand);
+  background-color: var(--bg);
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  -webkit-transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  -moz-transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  -ms-transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  -o-transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: top 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+#post-menu .sidebar-panel-ul {
+  list-style: none;
+  position: relative;
+  margin: 0;
+}
+#post-menu .sidebar-panel-ul li {
+  height: 0.24rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#post-menu .sidebar-panel-ul li a {
+  color: var(--text-secondary);
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+#post-menu .sidebar-panel-ul li a:hover,
+#post-menu .sidebar-panel-ul li a:focus,
+#post-menu .sidebar-panel-ul li a:active,
+#post-menu .sidebar-panel-ul li a:visited {
+  color: var(--brand);
+  text-decoration: none;
+}
+#post-menu .sidebar-panel-ul li a:visited,
+#post-menu .sidebar-panel-ul li a:focus,
+#post-menu .sidebar-panel-ul li a:active {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+#post-menu .sidebar-panel-ul li.is-active a {
+  color: var(--brand);
+}
+#post-menu .sidebar-panel-ul .li-h3 {
+  padding-left: 1em;
+}
+#post-menu .sidebar-panel-ul .li-h4 {
+  padding-left: 2em;
+}
+#post-menu .sidebar-panel-ul .li-h5 {
+  padding-left: 3em;
+}
+#post-menu .sidebar-panel-ul .li-h6 {
+  padding-left: 4em;
+}

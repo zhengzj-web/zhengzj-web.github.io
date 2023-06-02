@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 基于github page+jekyll创建个人博客
-typical: webskill
+typical: "webskill"
 category: Github
 tags: [Github pages, Jekyll]
 ---
