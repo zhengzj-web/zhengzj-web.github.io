@@ -27,7 +27,7 @@
   margin: 0;
 }
 #post-menu .sidebar-panel-ul li {
-  height: 0.24rem;
+  height: 0.2em;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -65,4 +65,83 @@
 }
 #post-menu .sidebar-panel-ul .li-h6 {
   padding-left: 4em;
+}
+#post .content {
+  word-break: break-word;
+}
+#post .content h2,
+#post .content h3,
+#post .content h4,
+#post .content h5,
+#post .content h6 {
+  padding-top: 0.8rem;
+  margin-top: -0.6rem;
+}
+#post .content .post-img {
+  text-align: center;
+}
+#post .content img {
+  color: var(--disabled);
+  width: auto;
+  max-width: 60%;
+  background: var(--bg);
+  cursor: -webkit-zoom-in;
+  padding: 0.1rem;
+  border-radius: 0.03rem;
+}
+#post .content img + .img-alt {
+  color: var(--disabled);
+  font-size: 0.14rem;
+  margin-top: 0;
+}
+#post .content a {
+  color: var(--brand);
+  text-underline-offset: 0.03rem;
+}
+#post .content .task-list {
+  list-style: none;
+  padding-left: 0.2rem;
+}
+#post .content .task-list .task-list-item input[type='checkbox'] {
+  margin-right: 0.08rem;
+}
+#site-scroll {
+  height: 100vh;
+  overflow: auto;
+}
+#site-container {
+  max-width: 12rem;
+  display: flex;
+  justify-content: start;
+  padding: 0 0.1rem;
+  margin: 0 auto;
+}
+#site-container #aside {
+  flex: 1;
+  width: 0;
+  position: sticky;
+  top: 0;
+}
+#site-container .container {
+  flex: 5;
+}
+#main.aside-sticky {
+  align-items: flex-start;
+}
+#main .main-view {
+  flex: 1;
+  min-height: calc(100vh - 1.04rem);
+  width: 0;
+  margin: 0 0.05rem 0 0;
+}
+#main .main-aside {
+  width: 3rem;
+  margin: 0 0 0 0.05rem;
+}
+#main .position-sticky {
+  position: sticky;
+  top: 0.6rem;
+}
+#main .position-sticky.card {
+  display: none;
 }

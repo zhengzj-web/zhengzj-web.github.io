@@ -1,7 +1,41 @@
-// creat post menu
+let html = '',
+  topArr = [];
+
+// tag a add target="_blank"
+const tagAAttrTarget = () => {
+  $('a[href^="http"]').each(function () {
+    $(this).attr('target', '_blank');
+  });
+};
+
+// code highlight
+const setCodeHighlight = () => {
+  // $("pre code").each(function (i, block) {
+  //   hljs.highlightBlock(block);
+  // });
+  return;
+};
+
+// set image viewer
+const imageViewer = () => {
+  $('#post img').click(function () {
+    var img = new Image();
+    img.src = $(this).attr('src');
+    $('#mask-layer').show();
+    $('#mask-layer .mask-layer-img').html(img);
+  });
+};
+
+// close image viewer
+const closeImageViewer = () => {
+  $('.mask-layer-btn').click(function () {
+    $('#mask-layer').hide().find('.mask-layer-img').html('');
+  });
+};
+// 创建文章目录
 const createMenu = () => {
-  $('#post-menu .pin').css('top', '0.16rem');
-  $('#post .post-content')
+  $('#post-menu .pin');
+  $('#post .content')
     .find('h1,h2,h3,h4,h5,h6')
     .each(function (i) {
       switch (this.tagName) {
@@ -90,7 +124,7 @@ const setMenuFollower = () => {
   document.querySelector('#site-scroll').addEventListener('scroll', menuFollowerCallback);
 };
 
-// set post menu controller
+// 设置文章目录的控制controller
 const setMenuController = () => {
   $('.sidebar-panel-ul li a').click(function (e) {
     // disabled menu scroll follower
@@ -104,7 +138,7 @@ const setMenuController = () => {
 
         self.parent().addClass('is-active').siblings().removeClass('is-active');
 
-        const $post = document.querySelector(`#post .post-content ${self.data('href')}`);
+        const $post = document.querySelector(`#post .content ${self.data('href')}`);
         $post.scrollIntoView({
           behavior: 'smooth',
         });
@@ -118,3 +152,70 @@ const setMenuController = () => {
     });
   });
 };
+// toggle header
+// const handleScroll = () => {
+//   document
+//   .querySelector('#site-scroll')
+//   .addEventListener('scroll', debounce(toggleHeader, 150));
+// }
+
+// 展开、收起侧边栏
+const toggleAside = () => {
+  document.getElementById('site-menu-btn').addEventListener('click', (e) => {
+    $header.className = $header.className ? '' : 'show-site-menu';
+  });
+
+  document.querySelector('#aside .aside-mask').addEventListener('click', () => {
+    $header.className = $header.className ? '' : 'show-site-menu';
+  });
+};
+
+$(function () {
+  // bindActive();
+  // pjaxEnd();
+  createMenu();
+  tagAAttrTarget();
+  setCodeHighlight();
+
+  imageViewer();
+  closeImageViewer();
+
+  setMenuFollower();
+  setMenuController();
+
+  // handleScroll();
+
+  toggleAside();
+
+  $('#post .content img').each(function () {
+    this.parentElement.classList.add('post-img');
+    const $imgAlt = document.createElement('p');
+    $imgAlt.setAttribute('class', 'img-alt');
+    $imgAlt.innerText = $(this).attr('alt');
+    this.after($imgAlt);
+
+    // TODO
+    // $(this).attr("onerror", "this.classList.add('error');");
+  });
+});
+
+function pjaxEnd() {
+  // menu automatic hide in mobile
+  if ($(window).width() <= 640) {
+    $('#aside')
+      .animate(
+        {
+          marginLeft: '-180px',
+        },
+        500
+      )
+      .dequeue();
+    $('#toggle').addClass('fullscreen');
+  }
+
+  if ($('#toggle').hasClass('fullscreen')) {
+    $('.contents-box').addClass('fullscreen');
+  } else {
+    $('.contents-box').removeClass('fullscreen');
+  }
+}

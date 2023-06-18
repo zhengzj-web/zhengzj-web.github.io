@@ -32,84 +32,12 @@ h6,
 p {
   margin: 0; }
 
-blockquote {
-  border: 0 solid #1a1a1a;
-  background-color: var(--bg);
-  border-left: 0.5rem solid var(--disabled);
-  color: #686868;
-  font-size: 1rem;
-  font-style: italic;
-  line-height: 1.75rem;
-  margin: 0.5em 0 0.5em 1.5em;
-  padding: 0 0 0 1rem; }
-
-/*blockquote p {
-	padding: 0;
-  margin: 0;
-}
-
-blockquote cite,
-blockquote small {
-	color: #1a1a1a;
-	display: block;
-	font-size: 1rem;
-	line-height: 1.75;
-
-	&::before {
-		content: "\2014\00a0";
-	}
-}
-
-blockquote em,
-blockquote i,
-blockquote cite {
-	font-style: normal;
-}
-
-blockquote > :last-child {
-	margin-bottom: 0;
-} */
-code,
-kbd,
-pre,
-samp {
-  font-family: Monaco, monospace;
-  font-size: 0.8em; }
-
-pre {
-  border: 1px solid #d1d1d1;
-  font-size: 1rem;
-  line-height: 1.3125;
-  margin: 0 0 1.75rem;
-  max-width: 100%;
-  overflow: auto;
-  padding: 1.75rem;
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word; }
-
 code {
+  font-family: Monaco, monospace;
+  font-size: 0.8em;
   background-color: #d1d1d1;
   padding: 0.125em 0.25em; }
 
-pre > code {
-  background-color: transparent;
-  padding-left: 0;
-  padding-right: 0; }
-
-/*abbr {
-	border-bottom: 1px dotted #d1d1d1;
-	cursor: help;
-}
-
-mark,
-ins {
-	background: #007acc;
-	color: #fff;
-	padding: 0.125em 0.25em;
-	text-decoration: none;
-}
-*/
 html {
   box-sizing: border-box;
   min-height: 50%; }
@@ -712,6 +640,18 @@ article > footer > * + div:not(:empty)::before {
   cursor: pointer; }
 
 /* cursor end */
+/* card */
+.card {
+  background-color: var(--card-bg);
+  padding: 0.16rem;
+  border: 1px solid var(--border);
+  border-radius: 0.04rem;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1); }
+
+.card.search-card {
+  padding: 0.04rem; }
+
+/* card end */
 /* Loop */
 /* padding元素所有四条边的内边距区域 */
 /* margin为给定元素设置所有四个（上下左右）方向的外边距属性 */

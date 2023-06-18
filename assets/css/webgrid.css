@@ -1,0 +1,21 @@
+.grid {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "header"  "header"  "header"
+    "main"    "main"    "aside"
+    "footer"  "footer"  "footer";
+}
+
+header {
+  grid-area: header;
+}
+main   {
+  grid-area: main;
+}
+aside  {
+  grid-area: aside;
+}
+footer {
+  grid-area: footer;
+}

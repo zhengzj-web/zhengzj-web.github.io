@@ -31,10 +31,32 @@
 </head>
 
 <body>
+	{% if page.url contains "post" %}
+	{% assign aside_sticky = "" %}  <!-- 文章详情页面，右侧边栏只有文章目录索引卡片弹性置顶 -->
+	{% else %}
+	{% assign aside_sticky = "aside-sticky" %}  <!-- 非文章详情页面，右侧边栏所有卡片弹性置顶 -->
+	{% endif %}
   <header>{% include header.html %}</header>
 	<main>{{ content }}</main>
 	<aside>{% include aside.html %}</aside>
+	<div id="site-scroll">
+		<div id="site-container">
+			<div class="container">
+				<div id="main" class="{{ aside_sticky }}">
+					<div
+						class="main-aside {% unless page.url contains 'post' %}position-sticky{% endunless %}"
+					>
+						{% if page.url contains "post" %}
+						<div class="card position-sticky">{% include post-menu.html %}</div>
+						{% endif %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<footer>{% include footer.html %}</footer>
 	{% include back2top.html %}
+	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/common.js"></script>
+	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/jquery-1.11.3.min.js"></script>
 </body>
 </html>

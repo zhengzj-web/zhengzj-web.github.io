@@ -23,9 +23,3 @@
       {% endfor %}
     </ul>
   </section>
-  {% if page.url contains "posts" %}
-  {% assign aside_sticky = "" %}  <!-- 文章详情页面，右侧边栏只有文章目录索引卡片弹性置顶 -->
-  {% else %}
-  {% assign aside_sticky = "aside-sticky" %}  <!-- 非文章详情页面，右侧边栏所有卡片弹性置顶 -->
-  {% endif %}
-  <div class="card position-sticky">{% include post-menu.html %}</div>
